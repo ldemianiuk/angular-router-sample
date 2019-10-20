@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../../hero.service';
-import { ParamMap, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
@@ -13,11 +13,11 @@ import { Observable } from 'rxjs';
 export class HeroListComponent implements OnInit {
   heroes$: Observable<Hero[]>;
   selectedId: number;
-  
+
   heroes: Hero[];
 
   constructor(private heroService: HeroService,
-    private route: ActivatedRoute) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.heroes$ = this.route.paramMap.pipe(
