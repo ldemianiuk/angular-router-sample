@@ -1,0 +1,9 @@
+<h2>CRISISES</h2>
+<ul class="crises">
+  <li *ngFor="let crisis of crises$ | async"
+    [class.selected]="crisis.id === selectedId"
+    (click)="onSelect(crisis)"
+    [routerLink]="['/crisis', crisis.id]">
+    <span class="badge">{{crisis.id}}</span> {{crisis.name}}
+  </li>
+</ul>
