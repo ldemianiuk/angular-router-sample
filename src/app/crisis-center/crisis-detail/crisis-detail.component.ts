@@ -4,6 +4,7 @@ import { switchMap } from 'rxjs/operators';
 import { Crisis } from '../crisis';
 import { CrisisService } from '../../crisis.service';
 import { Observable } from 'rxjs';
+import {relative} from 'path';
 
 @Component({
   selector: 'app-crisis-detail',
@@ -40,7 +41,7 @@ export class CrisisDetailComponent implements OnInit {
   }
 
   goToCrises() {
-    this.router.navigate(['/crisis-center', {id: this.crisis.id}]);
+    this.router.navigate(['../', {id: this.crisis.id}], {relativeTo: this.route});
   }
 }
 
