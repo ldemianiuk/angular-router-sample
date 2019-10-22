@@ -4,7 +4,6 @@ import { switchMap } from 'rxjs/operators';
 import { Crisis } from '../crisis';
 import { CrisisService } from '../../crisis.service';
 import { Observable } from 'rxjs';
-import {relative} from 'path';
 
 @Component({
   selector: 'app-crisis-detail',

@@ -31,12 +31,12 @@ export class HeroDetailComponent implements OnInit {
 
   next() {
     this.hero$ = this.service.getHero('' + (this.hero.id + 1));
-    this.hero$.subscribe(hero => this.hero = hero ? hero : this.hero);
+    this.hero$.subscribe(hero => this.hero = hero || this.hero);
   }
 
   previous() {
     this.hero$ = this.service.getHero('' + (this.hero.id - 1));
-    this.hero$.subscribe(hero => this.hero = hero ? hero : this.hero);
+    this.hero$.subscribe(hero => this.hero = hero || this.hero);
   }
 
   goToHeroes() {
