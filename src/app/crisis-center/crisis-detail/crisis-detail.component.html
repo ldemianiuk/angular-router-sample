@@ -3,13 +3,14 @@
   <div><span>id: </span>{{crisis.id}}</div>
   <div>
     <label>name:
-      <input [(ngModel)]="crisis.name" placeholder="name"/>
+      <input [(ngModel)]="editName" placeholder="name"/>
     </label>
   </div>
 </div>
 
 <div>
-  <button (click)="goToCrises()">back</button>
+  <button (click)="save()">save</button>
+  <button (click)="goToCrises()">cancel</button>
   <button (click)="previous()">previous</button>
   <button (click)="next()">next</button>
 </div>

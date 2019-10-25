@@ -12,6 +12,7 @@ import {CrisisCenterModule} from './crisis-center/crisis-center.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import {AdminModule} from './admin/admin.module';
 import {AuthModule} from './auth/auth.module';
+import {CanDeactivateGuard} from './can-deactivate.guard';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import {AuthModule} from './auth/auth.module';
     AdminModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [CanDeactivateGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
